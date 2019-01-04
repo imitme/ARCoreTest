@@ -42,6 +42,8 @@ public class SceneController : MonoBehaviour
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         // Add to the end of Update()
         ProcessTouches();
+
+        scoreboard.SetScore(snakeController.GetLength());
     }
 
     private void ProcessTouches()

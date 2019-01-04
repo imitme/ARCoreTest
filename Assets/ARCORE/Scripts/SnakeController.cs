@@ -6,6 +6,7 @@ using GoogleARCore;
 public class SnakeController : MonoBehaviour
 {
     private DetectedPlane detectedPlane;
+
     public GameObject snakeHeadPrefab;
     private GameObject snakeInstance;
 
@@ -78,5 +79,10 @@ public class SnakeController : MonoBehaviour
 
         // After instantiating a new snake instance, add the FoodConsumer component.
         snakeInstance.AddComponent<FoodConsumer>();
+    }
+
+    public int GetLength()
+    {
+        return GetComponent<Slithering>().GetLength();
     }
 }

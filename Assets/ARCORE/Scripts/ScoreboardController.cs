@@ -79,4 +79,13 @@ public class ScoreboardController : MonoBehaviour
             r.enabled = true;
         }
     }
+
+    public void SetScore(int score)
+    {
+        if (this.score != score)
+        {
+            GetComponentInChildren<TextMesh>().text = "Score: " + score;
+            this.score = score;
+        }
+    }
 }
