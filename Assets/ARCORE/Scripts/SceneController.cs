@@ -70,5 +70,8 @@ public class SceneController : MonoBehaviour
 
         // Add to SetSelectedPlane()
         snakeController.SetPlane(selectedPlane);
+
+        // Add to the bottom of SetSelectedPlane()
+        GetComponent<FoodController>().SetSelectedPlane(selectedPlane);
     }
 }

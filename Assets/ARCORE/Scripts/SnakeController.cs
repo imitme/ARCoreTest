@@ -75,5 +75,8 @@ public class SnakeController : MonoBehaviour
 
         // Pass the head to the slithering component to make movement work.
         GetComponent<Slithering>().Head = snakeInstance.transform;
+
+        // After instantiating a new snake instance, add the FoodConsumer component.
+        snakeInstance.AddComponent<FoodConsumer>();
     }
 }
